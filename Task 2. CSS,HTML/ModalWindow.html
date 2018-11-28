@@ -1,0 +1,84 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"; >
+  <title>Task 2.6</title>
+  <link rel="stylesheet" type="text/css" href="style/UniversalStyles.css"/>
+	<script type="text/javascript" src="scripts/script.js"></script>
+ </head>
+
+ <body>
+ 
+ <p>
+ <form action="#openModalPageEditing">
+    <button type="submit">Открыть окно редактирования сведений</button>
+ </form>	
+ </p>
+
+ <p>
+ <form action="#openModalPageInfo">
+    <button type="submit">Открыть окно просмотра сведений</button>
+ </form>	
+ </p>
+
+	<div id="openModalPageEditing" class="modalDialog">
+		<div>
+			<div class = "middle">
+			<p> <h3> EditCustomer</h3>  </p>
+			<p class = "PageEditing"><input type = "text" name = "firstname" placeholder = "name"></input>
+			<p>Country</p>		  
+			<p class = "PageEditing"> <input type = "text" name = "country" placeholder = "London"> </input> </p>
+			<p>ContactName</p>
+			<p class = "PageEditing" > <input type = "text" name = "contactname" placeholder = "ContactName"></input> </p>
+			<p>Email</p>
+			<p class = "PageEditing" > <input type = "email" name = "contactemail" placeholder = "Email@ewyr.com"></input> </p>
+			<p>ReferenceNumber</p>
+			<p class = "PageEditing" > <input type = "text" name = "referenecnumber" placeholder = "VLondon"></input> </p>
+			<p> <input type="button" value="Save"> </p>
+			</div>		
+
+		<footer>
+			<form action = "#close">
+				<p><button type="submit">Close</button> </p>
+			</form>
+		</footer>
+		</div>
+	</div>
+
+
+	<div id="openModalPageInfo" class = "modalDialog">
+		<div>
+		<a href="#close" title="Закрыть" class="close">X</a>
+		<p class = "Infodetails"> <strong>Employee details </strong></p>
+		<table border="0" style="background:transparent">
+			
+			<tr> 
+				<td><strong> Emp_Id: </strong></td>
+				<td class = "infouser">56473</td> 		
+			</tr>  
+			
+			<tr> 
+				<td><strong> Name: </strong></td>
+				<td class = "infouser">Anya</td> 		
+			</tr>  
+			
+			<tr> 
+				<td><strong> City: </strong></td>
+				<td class = "infouser">Olbani</td> 		
+			</tr>  
+			
+			<tr> 
+				<td><strong> State: </strong></td>
+				<td class = "infouser">New York</td> 		
+			</tr>  
+			
+			<tr> 
+				<td><strong> Country: </strong></td>
+				<td class = "infouser">USA</td> 		
+			</tr>  
+		  </table>
+		</div>
+	</div>
+	
+ </body>
+
+</html>
