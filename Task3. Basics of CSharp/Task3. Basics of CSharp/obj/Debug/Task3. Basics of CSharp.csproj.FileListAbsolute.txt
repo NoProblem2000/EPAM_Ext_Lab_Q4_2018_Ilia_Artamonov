@@ -1,0 +1,14 @@
+D:\Visual Studio Projects\Task3. Basics of CSharp\Task3. Basics of CSharp\bin\Debug\Task3.Basics_of_CSharp.exe.config
+D:\Visual Studio Projects\Task3. Basics of CSharp\Task3. Basics of CSharp\bin\Debug\Task3.Basics_of_CSharp.exe
+D:\Visual Studio Projects\Task3. Basics of CSharp\Task3. Basics of CSharp\bin\Debug\Task3.Basics_of_CSharp.pdb
+D:\Visual Studio Projects\Task3. Basics of CSharp\Task3. Basics of CSharp\obj\Debug\Task3. Basics of CSharp.csprojAssemblyReference.cache
+D:\Visual Studio Projects\Task3. Basics of CSharp\Task3. Basics of CSharp\obj\Debug\Task3. Basics of CSharp.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\Task3. Basics of CSharp\Task3. Basics of CSharp\obj\Debug\Task3.Basics_of_CSharp.exe
+D:\Visual Studio Projects\Task3. Basics of CSharp\Task3. Basics of CSharp\obj\Debug\Task3.Basics_of_CSharp.pdb
+D:\Visual Studio Projects\EPAM_Ext_Lab_Q4_2018_Ilia_Artamonov\Task3. Basics of CSharp\Task3. Basics of CSharp\bin\Debug\Task3.Basics_of_CSharp.exe.config
+D:\Visual Studio Projects\EPAM_Ext_Lab_Q4_2018_Ilia_Artamonov\Task3. Basics of CSharp\Task3. Basics of CSharp\bin\Debug\Task3.Basics_of_CSharp.exe
+D:\Visual Studio Projects\EPAM_Ext_Lab_Q4_2018_Ilia_Artamonov\Task3. Basics of CSharp\Task3. Basics of CSharp\bin\Debug\Task3.Basics_of_CSharp.pdb
+D:\Visual Studio Projects\EPAM_Ext_Lab_Q4_2018_Ilia_Artamonov\Task3. Basics of CSharp\Task3. Basics of CSharp\obj\Debug\Task3. Basics of CSharp.csprojAssemblyReference.cache
+D:\Visual Studio Projects\EPAM_Ext_Lab_Q4_2018_Ilia_Artamonov\Task3. Basics of CSharp\Task3. Basics of CSharp\obj\Debug\Task3. Basics of CSharp.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\EPAM_Ext_Lab_Q4_2018_Ilia_Artamonov\Task3. Basics of CSharp\Task3. Basics of CSharp\obj\Debug\Task3.Basics_of_CSharp.exe
+D:\Visual Studio Projects\EPAM_Ext_Lab_Q4_2018_Ilia_Artamonov\Task3. Basics of CSharp\Task3. Basics of CSharp\obj\Debug\Task3.Basics_of_CSharp.pdb
