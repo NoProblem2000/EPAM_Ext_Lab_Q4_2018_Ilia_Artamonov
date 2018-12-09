@@ -12,10 +12,13 @@ namespace Task3.Basics_of_CSharp
             Stopwatch stopwatch = new Stopwatch();
             string str = "";
             StringBuilder sb = new StringBuilder();
+            // опять хардкод. ЧТо за константа по названию не ясно.
             int N = 100000000;
             stopwatch.Start();
+            // код закоменнтирован , как увидеть сравнение?
             //for (int i = 0; i < N; i++)
             //{
+            // ki. почему не     string.Concat()? 
             //    str += "*";
             //}
             stopwatch.Stop();
@@ -29,6 +32,7 @@ namespace Task3.Basics_of_CSharp
             }
             stopwatch2.Stop();
             Console.WriteLine(stopwatch2.ElapsedMilliseconds);
+            // здесь этому явно не место.
             stopwatch.Stop();
             long timeStringBuilder = stopwatch.ElapsedMilliseconds;
             Console.WriteLine($"Time execution in {N} iteration. String: {timeString}, StringBuilder: {timeStringBuilder}");

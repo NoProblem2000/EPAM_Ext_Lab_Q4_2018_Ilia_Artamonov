@@ -27,16 +27,18 @@ namespace Task3.Basics_of_CSharp
 
                 int numberOfStars = 1;
                 CountOfGaps = NumberOfRows - 1;
+                // ki решение рабочее, но выглядит хардкодно. Уже сейчас приходится думать, почему именно эти цифры и как тут что вычисляется. 
+                // Это же просто арифметическая прогрессия. Я бы вынес вычисление количества звездочек и пропусков в отдельный метод, на вход которого подавал
+                // бы номер шага. и у этого метода в качестве out параметров были бы интересующие нас значения.
                 for (int i = 1; i < NumberOfRows + 1; i++)
                 {
                     Console.Write(String.Concat(Enumerable.Repeat(" ", CountOfGaps)));
                     Console.WriteLine(String.Concat(Enumerable.Repeat("*", numberOfStars)));
-                    
+
                     if (CountOfGaps > 0)
                     {
                         CountOfGaps--;
                     }
-
                     numberOfStars += 2;
                 }
                 Console.WriteLine("\nTask is completed\n");

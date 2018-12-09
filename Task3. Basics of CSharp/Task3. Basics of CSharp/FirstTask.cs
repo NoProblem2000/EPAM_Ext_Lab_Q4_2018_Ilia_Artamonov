@@ -1,12 +1,23 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 
 namespace Task3.Basics_of_CSharp
 {
     public class FirstTask
     {
-       private int SideA = 1;
-       private int SideB = 1;
-       
+        #region Properties, fields 
+
+        // ki: ниже идет реализация паттерна одиночка с отложенной инициализацией для избежания гонок. 
+        public static FirstTask Instance => instance.Value;
+
+        private static readonly Lazy<FirstTask> instance =
+            new Lazy<FirstTask>(() => new FirstTask());
+
+        private int SideA = 1;
+        private int SideB = 1;
+
+        #endregion Prorepties, fields
+
         public void CalculateSquare()
         {
             WriteLine("This task find the square of rectangle");
@@ -14,14 +25,14 @@ namespace Task3.Basics_of_CSharp
             WriteLine("Enter the side B");
             while (true)
             {
-               
+
                 if (!int.TryParse(ReadLine(), out SideA) || !int.TryParse(ReadLine(), out SideB))
                 {
                     WriteLine("You entered not a number or not a integer");
                     continue;
                 }
-              
-                if (SideA <=0 || SideB <= 0)
+
+                if (SideA <= 0 || SideB <= 0)
                 {
                     WriteLine("Enter the numbers, which greater the zero");
                     continue;
@@ -30,9 +41,9 @@ namespace Task3.Basics_of_CSharp
                 WriteLine("Press enter\n\n");
                 ReadKey();
                 break;
-                
+
             }
-            
+
         }
     }
 }

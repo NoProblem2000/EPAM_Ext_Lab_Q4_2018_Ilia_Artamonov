@@ -2,18 +2,23 @@
 using System.Linq;
 namespace Task3.Basics_of_CSharp
 {
+    // ki. модификаторы доступа надо указывать явно всегда- это в большинстве соглашений о кодировании прописано
     class EleventhTask
     {
         private int LenghthOneWord;
+        // ki. везде вижу этот момент - не обязательно и не нужно инициализировать переменные значениями по умолчанию
         private int CountWords = 0;
         private double Average;
         private double Sum = 0;
+
+        // ki. отделаяй пустыми  строками логически не связанные блоки кода. так легче читать.
         public void AverageLengthWord()
         {
             while (true)
             {
                 Console.WriteLine("Input the sentence");
                 string originStr = Console.ReadLine();
+                // ki. никаких подопных сравнений, только через методы класса string. тут string.IsNullOrEmpty
                 if (originStr == "")
                 {
                     Console.WriteLine("You don't enter nothing");
@@ -29,7 +34,7 @@ namespace Task3.Basics_of_CSharp
                 char[] array = originStr.ToCharArray();
                 for (int i = 0; i < array.Length; i++)
                 {
-                   if (char.IsSeparator(array[i]) || char.IsPunctuation(array[i]))
+                    if (char.IsSeparator(array[i]) || char.IsPunctuation(array[i]))
                     {
                         Sum += LenghthOneWord;
                         if (LenghthOneWord == 0)
