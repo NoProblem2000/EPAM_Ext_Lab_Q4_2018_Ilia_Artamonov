@@ -30,13 +30,15 @@ namespace Task3.Basics_of_CSharp
             Random random = new Random();
             int sizeOfArray = random.Next(2, 100);
             int[] array = new int[sizeOfArray];
-            array =  InitArray(array);
+            array = InitArray(array);
             Console.WriteLine("Origin array");
             foreach (var element in array)
             {
                 Console.Write(element + " ");
             }
             Console.WriteLine();
+            // ki опять хардкод. можно вновь применить enum
+            // сами сортировки я бы вынес в два отдельных метода.
             if (typeSort == 2)
             {
                 for (int i = 0; i < array.Length; i++)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.AccessControl;
 
 
 namespace Task3.Basics_of_CSharp
@@ -19,7 +20,14 @@ namespace Task3.Basics_of_CSharp
                                          " - 12\n" +
                                          "- 13\n" +
                                          "- 0\n\n\n\n";
-        public static bool Exit;
+
+        #region Properties, fields
+
+        // ki: публичными могут быть только свойства. Не забываем про принцип инкапсуляции. 
+        public static bool Exit { get; set; }
+
+        #endregion Properties, fields
+
         static void Main(string[] args)
         {
             while (!Exit)
@@ -38,84 +46,86 @@ namespace Task3.Basics_of_CSharp
                     switch (enteredNumberTask)
                     {
                         case 0:
-                        {
-                            Exit = true;
-                            break;
-                        }
+                            {
+                                Exit = true;
+                                break;
+                            }
                         case 1:
-                        {
-                            new FirstTask().CalculateSquare();
-                            break;
-                        }
+                            {
+                                // ki. Я бы не создавал экземпляр класса каждый раз, чтобы не засорять память, которую сборщик мусора отчистит далеко не сразу
+                                // для экономии ресурсов я бы использовал паттерн Одиночка. Это уже продвинутый уровень разработки, но твои задания сделаны очень качественно
+                                // и я считаю, что тебя уже можно начать с этим знакомить.
+                                FirstTask.Instance.CalculateSquare();
+                                break;
+                            }
                         case 2:
-                        {
-                            new SecondTask().ViewStars();
-                            break;
-                        }
+                            {
+                                new SecondTask().ViewStars();
+                                break;
+                            }
                         case 3:
-                        {
-                            new ThirdTask().ViewStars();
-                            break;
-                        }
+                            {
+                                new ThirdTask().ViewStars();
+                                break;
+                            }
                         case 4:
-                        {
-                            new FourthTask().ViewStars();
-                            break;
-                        }
+                            {
+                                new FourthTask().ViewStars();
+                                break;
+                            }
                         case 5:
-                        {
-                            new FifthTask().SumOfNaturalNumbers();
-                            break;
-                        }
+                            {
+                                new FifthTask().SumOfNaturalNumbers();
+                                break;
+                            }
                         case 6:
-                        {
-                            new SixthTask().LabelSelection();
-                            break;
-                        }
+                            {
+                                new SixthTask().LabelSelection();
+                                break;
+                            }
                         case 7:
-                        {
-                            new SeventhTask().Sort();
-                            break;
-                        }
+                            {
+                                new SeventhTask().Sort();
+                                break;
+                            }
                         case 8:
-                        {
-                            new EighthTask().InvertPositiveValues();
-                            break;
-                        }
+                            {
+                                new EighthTask().InvertPositiveValues();
+                                break;
+                            }
                         case 9:
-                        {
-                            new NinthTask().SumPositiveElements();
-                            break;
-                        }
+                            {
+                                new NinthTask().SumPositiveElements();
+                                break;
+                            }
                         case 10:
-                        {
-                            new TenthTask().SumOdevityElements();
-                            break;
-                        }
+                            {
+                                new TenthTask().SumOdevityElements();
+                                break;
+                            }
                         case 11:
-                        {
-                            new EleventhTask().AverageLengthWord();
-                            break;
-                        }
+                            {
+                                new EleventhTask().AverageLengthWord();
+                                break;
+                            }
                         case 12:
-                        {
-                            new TwelthTask().DoubleLetter();
-                            break;
-                        }
+                            {
+                                new TwelthTask().DoubleLetter();
+                                break;
+                            }
                         case 13:
-                        {
-                            new ThirteenthTask().CalculateTimeExecution();
-                            break;
-                        }
+                            {
+                                new ThirteenthTask().CalculateTimeExecution();
+                                break;
+                            }
                         default:
-                        {
-                            Console.WriteLine("You entered a number of task, which not exist!\n\n\n\n");
-                            break;
-                        }
+                            {
+                                Console.WriteLine("You entered a number of task, which not exist!\n\n\n\n");
+                                break;
+                            }
                     }
                 }
 
             }
         }
     }
-}

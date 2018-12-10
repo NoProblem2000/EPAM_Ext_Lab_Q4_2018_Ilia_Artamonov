@@ -10,11 +10,12 @@ namespace Task3.Basics_of_CSharp
         {
             while (true)
             {
-                StringBuilder finalString= new StringBuilder();
+                StringBuilder finalString = new StringBuilder();
                 Console.WriteLine("This task double letters in string on equality you input string");
                 Console.WriteLine("Input original sentence");
                 string originString = Console.ReadLine();
                 char[] arrayOriginString = originString.ToCharArray();
+
                 if (originString == "")
                 {
                     Console.WriteLine("You entered empty string");
@@ -22,7 +23,7 @@ namespace Task3.Basics_of_CSharp
                 }
 
                 Console.WriteLine("Input the sentence which double letters in origin sentence");
-                string strForDoubled =  Console.ReadLine();
+                string strForDoubled = Console.ReadLine();
                 if (strForDoubled == "")
                 {
                     Console.WriteLine("You entered empty string");
@@ -34,7 +35,7 @@ namespace Task3.Basics_of_CSharp
                 {
                     if (strForDoubled.Contains(arrayOriginString[i]) && !char.IsPunctuation(arrayOriginString[i]) && !char.IsSeparator(arrayOriginString[i]))
                     {
-                       finalString.Append(String.Concat(Enumerable.Repeat(arrayOriginString[i], 2)));
+                        finalString.Append(String.Concat(Enumerable.Repeat(arrayOriginString[i], 2)));
                     }
                     else
                     {

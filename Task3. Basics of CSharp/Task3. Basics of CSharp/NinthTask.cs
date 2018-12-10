@@ -11,7 +11,8 @@ namespace Task3.Basics_of_CSharp
         {
             Console.WriteLine("This task get the sum of positive values of array");
             random = new Random();
-            int[] Array = new int[SizeOfArray];{ };
+            int[] Array = new int[SizeOfArray];
+            { };
             for (int i = 0; i < SizeOfArray; i++)
             {
                 Array[i] = random.Next(-100, 100);
@@ -23,6 +24,7 @@ namespace Task3.Basics_of_CSharp
                 Console.Write(element + " ");
             }
             Console.WriteLine();
+            // ki. не обязательно ставить {} для однострочных циклов и условий - это мешает читаемости. И здесь лучше использовать foreach.
             for (int i = 0; i < SizeOfArray; i++)
             {
                 if (Array[i] > 0)
