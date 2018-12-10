@@ -7,10 +7,10 @@ namespace Task3.Basics_of_CSharp
     {
         #region Properties, fields 
 
-        // ki: ниже идет реализация паттерна одиночка с отложенной инициализацией для избежания гонок. 
-        public static FirstTask Instance => instance.Value;
+        
+        public static FirstTask Instance => LazyInstance.Value;
 
-        private static readonly Lazy<FirstTask> instance =
+        private static readonly Lazy<FirstTask> LazyInstance =
             new Lazy<FirstTask>(() => new FirstTask());
 
         private int SideA = 1;

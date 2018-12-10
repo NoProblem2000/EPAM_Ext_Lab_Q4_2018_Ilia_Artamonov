@@ -5,8 +5,19 @@ namespace Task3.Basics_of_CSharp
 {
     public class FourthTask
     {
+        public static FourthTask Instance => LazyInstance.Value;
+        private static readonly Lazy<FourthTask> LazyInstance = 
+            new Lazy<FourthTask>(()=> new FourthTask());
+
         private int NumberOfPyramids;
-        private int CountOfGaps;
+        private void CalculateGapsAndStars(ref int CountOfGaps, ref int numberOfStars)
+        {
+            if (CountOfGaps > 0)
+            {
+                CountOfGaps--;
+            }
+            numberOfStars += 2;
+        }
 
         public void ViewStars()
         {
@@ -27,7 +38,7 @@ namespace Task3.Basics_of_CSharp
 
                 int numberOfStars = 1;
                 int numberOfRows = NumberOfPyramids + 1;
-                CountOfGaps = NumberOfPyramids;
+                int countOfGaps = NumberOfPyramids;
                 for (int i = 1; i < NumberOfPyramids + 1; i++)
                 {
                     numberOfRows = i+1;
@@ -35,21 +46,17 @@ namespace Task3.Basics_of_CSharp
                     {
                         if ((numberOfRows == 2) && (j == 0))
                         {
-                            Console.Write(String.Concat(Enumerable.Repeat(" ", CountOfGaps)));
+                            Console.Write(String.Concat(Enumerable.Repeat(" ", countOfGaps)));
                             Console.WriteLine(String.Concat(Enumerable.Repeat("*", numberOfStars)));
                         }
-                            Console.Write(String.Concat(Enumerable.Repeat(" ", CountOfGaps)));
+                            Console.Write(String.Concat(Enumerable.Repeat(" ", countOfGaps)));
                             Console.WriteLine(String.Concat(Enumerable.Repeat("*", numberOfStars)));
 
-                            if (CountOfGaps > 0)
-                            {
-                                CountOfGaps--;
-                            }
-                            numberOfStars += 2;
+                           CalculateGapsAndStars(ref countOfGaps, ref numberOfStars);
                     }
 
                     numberOfStars = 1;
-                    CountOfGaps = NumberOfPyramids;
+                    countOfGaps = NumberOfPyramids;
                 }
                 Console.WriteLine("\nTask is completed\n");
                 Console.WriteLine("Press enter\n\n");

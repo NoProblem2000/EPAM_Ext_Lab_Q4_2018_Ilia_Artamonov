@@ -4,6 +4,11 @@ namespace Task3.Basics_of_CSharp
 {
     class EighthTask
     {
+        private static readonly Lazy<EighthTask> LazyInstance = 
+            new Lazy<EighthTask>(()=> new EighthTask());
+
+        public static EighthTask Instance => LazyInstance.Value;
+
         private int Dimension;
         private int[,,] InitArray(int[,,] array)
         {

@@ -4,6 +4,11 @@ namespace Task3.Basics_of_CSharp
 {
     public class NinthTask
     {
+        private static readonly Lazy<NinthTask> LazyInstance =
+            new Lazy<NinthTask>(() => new NinthTask());
+
+        public static NinthTask Instance => LazyInstance.Value;
+
         private int SizeOfArray = 20;
         private Random random;
         private int SumPositive = 0;
@@ -25,13 +30,17 @@ namespace Task3.Basics_of_CSharp
             }
             Console.WriteLine();
             // ki. не обязательно ставить {} для однострочных циклов и условий - это мешает читаемости. И здесь лучше использовать foreach.
-            for (int i = 0; i < SizeOfArray; i++)
-            {
-                if (Array[i] > 0)
-                {
-                    SumPositive += Array[i];
-                }
-            }
+            //for (int i = 0; i < SizeOfArray; i++)
+            //{
+            //    if (Array[i] > 0)
+            //    {
+            //        SumPositive += Array[i];
+            //    }
+            //}
+
+            foreach (var element in Array)
+                if (element > 0)
+                    SumPositive += element;
 
             Console.WriteLine($"Sum of positive elements equal {SumPositive}\n");
             Console.WriteLine("Press enter\n\n");

@@ -6,6 +6,11 @@ namespace Task3.Basics_of_CSharp
 {
     class TwelthTask
     {
+        private static readonly Lazy<TwelthTask> LazyInstance =
+            new Lazy<TwelthTask>(() => new TwelthTask());
+
+        public static TwelthTask Instance => LazyInstance.Value;
+
         public void DoubleLetter()
         {
             while (true)

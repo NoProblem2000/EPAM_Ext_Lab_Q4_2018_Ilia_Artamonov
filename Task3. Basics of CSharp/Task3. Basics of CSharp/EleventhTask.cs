@@ -3,8 +3,13 @@ using System.Linq;
 namespace Task3.Basics_of_CSharp
 {
     // ki. модификаторы доступа надо указывать явно всегда- это в большинстве соглашений о кодировании прописано
-    class EleventhTask
+    public class EleventhTask
     {
+        private static readonly Lazy<EleventhTask> LazyInstance =
+            new Lazy<EleventhTask>(() => new EleventhTask());
+
+        public static EleventhTask Instance => LazyInstance.Value;
+
         private int LenghthOneWord;
         // ki. везде вижу этот момент - не обязательно и не нужно инициализировать переменные значениями по умолчанию
         private int CountWords = 0;
@@ -18,8 +23,7 @@ namespace Task3.Basics_of_CSharp
             {
                 Console.WriteLine("Input the sentence");
                 string originStr = Console.ReadLine();
-                // ki. никаких подопных сравнений, только через методы класса string. тут string.IsNullOrEmpty
-                if (originStr == "")
+                if (String.IsNullOrEmpty(originStr))
                 {
                     Console.WriteLine("You don't enter nothing");
                     continue;

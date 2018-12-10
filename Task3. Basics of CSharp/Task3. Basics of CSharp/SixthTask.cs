@@ -5,20 +5,31 @@ namespace Task3.Basics_of_CSharp
 {
     class SixthTask
     {
+        public static SixthTask Instance => LazyInstance.Value;
+
+        private static readonly Lazy<SixthTask> LazyInstance =
+            new Lazy<SixthTask>(()=> new SixthTask());
+
         List<string> ChoosenTypesSelection = new List<string>();
-        // ki: для сохранения типа удобно использовать enum. тогда и от харкода можно будет избавиться.
-        private readonly string[] TypeSelection = { "bold", "italic", "underline" };
+        
+        public enum TypesSelection
+        {
+            bold = 1,
+            italic = 2,
+            underline = 3
+        }
+
         private int Input;
 
-        private void SelectType(int type)
+        private void SelectType(TypesSelection type)
         {
-            if (ChoosenTypesSelection.Contains(TypeSelection[type]))
+            if (ChoosenTypesSelection.Contains(type.ToString()))
             {
-                ChoosenTypesSelection.Remove(TypeSelection[type]);
+                ChoosenTypesSelection.Remove(type.ToString());
             }
             else
             {
-                ChoosenTypesSelection.Add(TypeSelection[type]);
+                ChoosenTypesSelection.Add(type.ToString());
             }
         }
 
@@ -54,8 +65,9 @@ namespace Task3.Basics_of_CSharp
                 {
                     break;
                 }
-                // ki: Хардкод. 
-                SelectType(Input - 1);
+
+                var type = (TypesSelection) Input;
+                SelectType(type);
 
 
             }

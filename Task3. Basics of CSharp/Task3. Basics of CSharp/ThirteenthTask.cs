@@ -1,41 +1,40 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 namespace Task3.Basics_of_CSharp
 {
     class ThirteenthTask
     {
+        private static readonly Lazy<ThirteenthTask> LazyInstance =
+            new Lazy<ThirteenthTask>(() => new ThirteenthTask());
+
+        public static ThirteenthTask Instance => LazyInstance.Value;
+
         public void CalculateTimeExecution()
         {
             Console.WriteLine("This task shoe you differents in speed between class String and StringBuilder ");
             Stopwatch stopwatch = new Stopwatch();
-            string str = "";
             StringBuilder sb = new StringBuilder();
-            // опять хардкод. ЧТо за константа по названию не ясно.
-            int N = 100000000;
+            int iteration = 100000;
             stopwatch.Start();
-            // код закоменнтирован , как увидеть сравнение?
-            //for (int i = 0; i < N; i++)
-            //{
-            // ki. почему не     string.Concat()? 
-            //    str += "*";
-            //}
+            
+            for (int i = 0; i < iteration; i++)
+            {
+                String.Concat(Enumerable.Repeat("*", i));
+            }
             stopwatch.Stop();
             long timeString = stopwatch.ElapsedMilliseconds;
             stopwatch.Restart();
-            Stopwatch stopwatch2 = new Stopwatch();
-            stopwatch2.Start();
-            for (int i = 0; i < N; i++)
+         
+            for (int i = 0; i < iteration; i++)
             {
                 sb.Append("*");
             }
-            stopwatch2.Stop();
-            Console.WriteLine(stopwatch2.ElapsedMilliseconds);
-            // здесь этому явно не место.
             stopwatch.Stop();
             long timeStringBuilder = stopwatch.ElapsedMilliseconds;
-            Console.WriteLine($"Time execution in {N} iteration. String: {timeString}, StringBuilder: {timeStringBuilder}");
+            Console.WriteLine($"Time execution in {iteration} iteration. String: {timeString}, StringBuilder: {timeStringBuilder}");
             Console.WriteLine("Press enter to exit to main menu");
             Console.ReadKey();
         }

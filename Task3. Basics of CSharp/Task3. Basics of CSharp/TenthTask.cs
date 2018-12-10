@@ -4,6 +4,11 @@ namespace Task3.Basics_of_CSharp
 {
     class TenthTask
     {
+        private static readonly Lazy<TenthTask> LazyInstance =
+            new Lazy<TenthTask>(() => new TenthTask());
+
+        public static TenthTask Instance => LazyInstance.Value;
+
         private int Rows;
         private int Columns;
         private int SumElements = 0;

@@ -5,8 +5,20 @@ namespace Task3.Basics_of_CSharp
 {
     class ThirdTask
     {
+        public static ThirdTask Instance => LazyInstance.Value;
+        private static readonly Lazy<ThirdTask> LazyInstance =
+            new Lazy<ThirdTask>(()=> new ThirdTask());
+
         private int NumberOfRows;
-        private int CountOfGaps;
+        
+        private void CalculateGapsAndStars(ref int CountOfGaps, ref int numberOfStars)
+        {
+            if (CountOfGaps > 0)
+            {
+                CountOfGaps--;
+            }
+            numberOfStars += 2;
+        }
 
         public void ViewStars()
         {
@@ -26,20 +38,14 @@ namespace Task3.Basics_of_CSharp
                 }
 
                 int numberOfStars = 1;
-                CountOfGaps = NumberOfRows - 1;
-                // ki решение рабочее, но выглядит хардкодно. Уже сейчас приходится думать, почему именно эти цифры и как тут что вычисляется. 
-                // Это же просто арифметическая прогрессия. Я бы вынес вычисление количества звездочек и пропусков в отдельный метод, на вход которого подавал
-                // бы номер шага. и у этого метода в качестве out параметров были бы интересующие нас значения.
+                int countOfGaps = NumberOfRows - 1;
+
                 for (int i = 1; i < NumberOfRows + 1; i++)
                 {
-                    Console.Write(String.Concat(Enumerable.Repeat(" ", CountOfGaps)));
+                    Console.Write(String.Concat(Enumerable.Repeat(" ", countOfGaps)));
                     Console.WriteLine(String.Concat(Enumerable.Repeat("*", numberOfStars)));
 
-                    if (CountOfGaps > 0)
-                    {
-                        CountOfGaps--;
-                    }
-                    numberOfStars += 2;
+                    CalculateGapsAndStars(ref countOfGaps, ref numberOfStars);
                 }
                 Console.WriteLine("\nTask is completed\n");
                 Console.WriteLine("Press enter\n\n");

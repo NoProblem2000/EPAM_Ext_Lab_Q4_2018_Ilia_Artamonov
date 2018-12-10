@@ -7,6 +7,10 @@ namespace Task3.Basics_of_CSharp
     {
         private int NumberOfRows;
 
+        public static SecondTask Instance => LazyInstance.Value;
+        private static readonly Lazy<SecondTask> LazyInstance =
+            new Lazy<SecondTask>(() => new SecondTask());
+
         public void ViewStars()
         {
             Console.WriteLine("This task write number of rows with * that you entered\n");

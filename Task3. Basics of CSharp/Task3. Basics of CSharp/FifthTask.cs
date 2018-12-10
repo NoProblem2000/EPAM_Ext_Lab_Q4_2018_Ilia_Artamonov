@@ -4,6 +4,10 @@ namespace Task3.Basics_of_CSharp
 {
     class FifthTask
     {
+        public static FifthTask Instance => LazyInstance.Value;
+        private static readonly Lazy<FifthTask> LazyInstance = 
+            new Lazy<FifthTask>(()=> new FifthTask());
+
         private const int MaxValue = 1000;
         private readonly int[] ArrayOfMultiple = new[] { 3,5};
         private int Sum = 0;
