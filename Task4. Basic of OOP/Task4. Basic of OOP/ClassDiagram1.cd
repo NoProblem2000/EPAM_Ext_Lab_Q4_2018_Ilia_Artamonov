@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Task4.Basic_of_OOP.Person">
+    <Position X="22.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEAAAAAAAAAAAAAACAKQAIAAAAAAAAAAACAAAgAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.User">
+    <Position X="20.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.AccreditUser">
+    <Position X="23.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAgBAAAAAAIAAAAAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>AccreditUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.AdminUser">
+    <Position X="26.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAgBEAAAAAIAAAAAAAAAgAQAAgAAAAAA=</HashCode>
+      <FileName>AdminUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Reviews">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAACAAAAAAEAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Reviews.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Person" />
+      <Property Name="DetailsFilm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Logger">
+    <Position X="20.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.DetailsFilm">
+    <Position X="16.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAIACCgAAAAAAIgAAAAAAAAAAAAACAAAAACAA=</HashCode>
+      <FileName>DetailsFilm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.BunchStyles">
+    <Position X="16" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAEAAAAAAAIAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>BunchStyles.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DetailsFilm" />
+      <Property Name="Styles" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Styles">
+    <Position X="16" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Styles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Duration">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAEAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Duration.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DetailsFilm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Posters">
+    <Position X="18" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAEAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Posters.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DetailsFilm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Annotations">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Annotations.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DetailsFilm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Marks">
+    <Position X="11.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Marks.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DetailsFilm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Filmmakers">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAACAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filmmakers.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DetailsFilm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.BunchActors">
+    <Position X="11" Y="9" Width="1.5" />
+    <AssociationLine Name="DetailsFilm" Type="Task4.Basic_of_OOP.DetailsFilm">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.546" Y="0.177" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAgAAEAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BunchActors.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DetailsFilm" />
+      <Property Name="Actors" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task4.Basic_of_OOP.Actors">
+    <Position X="8" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Actors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
